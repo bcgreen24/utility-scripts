@@ -1,6 +1,6 @@
 for dir in ~/htdocs/drupal/drupal/sites/*
   do
-    if [ $dir = "/local/users/drupadm/htdocs/drupal/drupal/all" ]
+    if [ $dir = "/local/users/drupadm/htdocs/drupal/drupal/sites/all" ]
     then
       continue
     fi
