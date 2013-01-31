@@ -1,6 +1,6 @@
 from gi.repository import Gtk
 from xml.etree import ElementTree as ET
-#import lxml.etree as etree
+import lxml.etree as etree
 
 root = ET.Element("beans")
 print type(root)
@@ -9,12 +9,12 @@ dictCourseList = {}
 
 class Crops_Config:
     
-    #def prettyPrintET(self, etNode):
-        #reader = Sax2.Reader()
-        #docNode = reader.fromString(ET.tostring(etNode))
-        #tmpStream = StringIO()
-        #PrettyPrint(docNode, stream=tmpStream)
-        #return tmpStream.getvalue()
+    def prettyPrintET(self, etNode):
+        reader = Sax2.Reader()
+        docNode = reader.fromString(ET.tostring(etNode))
+        tmpStream = StringIO()
+        PrettyPrint(docNode, stream=tmpStream)
+        return tmpStream.getvalue()
 
     def prettify(self, elem, level=0):
         i = "\n" + level*"  "
@@ -95,10 +95,10 @@ class Crops_Config:
         self.prettify(root)
         ET.ElementTree(root).write("course.xml")
     
-    #def tree_to_text(self, *args):
-         #fileHandle = open("~/course.xml", "r")
-         #tree = etree.parse(fileHandle)
-         #return etree.tostring(tree, pretty_print=True)
+    def tree_to_text(self, *args):
+        fileHandle = open("~/course.xml", "r")
+        tree = etree.parse(fileHandle)
+        return etree.tostring(tree, pretty_print=True)
              
     def on_btnPreview_released(self, *args):
         global root
@@ -107,8 +107,8 @@ class Crops_Config:
         self.build_file(root)
         buff = txtPreview.get_buffer()
         self.prettify(root)
-        #ET.ElementTree(root).write("~/course.xml")
-        #buff.set_text(self.tree_to_text)
+        ET.ElementTree(root).write("~/course.xml")
+        buff.set_text(self.tree_to_text)
         ET.dump(root)
 
     def on_btnCopySiteID_released(self, *args):

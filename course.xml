@@ -1,0 +1,17 @@
+<beans>
+  <bean class="edu.ucmerced.banner.api.BannerSiteInstructions" id="dfvadfvbfd" parent="customCourseSiteDefaults">
+    <property name="testing" value="true" />
+    <property name="custom" value="true" />
+    <property name="termCode" value="201310" />
+    <property name="siteId" value="${termcode}-dfvadfvbfd" />
+    <property name="siteTitle" value="${semestercode}-dfvadfvbfd" />
+    <property name="shortDescription" value="dfvadfvbfd" />
+    <property name="emailAlias" value="${semestercode}-dfvadfvbfd" />
+    <property name="sectionName" value="${subjectcode}-${coursenumber}-${sectiontypedesc}-${sectionid}" />
+    <property name="sections">
+      <list>
+        <value>subjcode=math,crsenumb=101</value>
+      </list>
+    </property>
+  </bean>
+</beans>
