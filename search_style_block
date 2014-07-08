@@ -1,0 +1,11 @@
+<style>
+.gsc-result-info-container, .gsc-result-info, .gsc-above-wrapper-area, .gsc-above-wrapper-area-container, form tbody, .gsc-search-button, .gsc-search-box, .gsc-clear-button, .gsc-input{
+border: 0;
+}
+ .region-header{
+width: 275px;
+}
+gsc-above-wrapper-area{
+padding: 5px;
+}
+</style>
